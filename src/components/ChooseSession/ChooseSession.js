@@ -15,7 +15,7 @@ export default function ChooseSession() {
         promise.then(response => setTime(response.data));
     }, [])
 
-    //console.log(time);
+    console.log(time);
 
     if (time === null) {
         return (

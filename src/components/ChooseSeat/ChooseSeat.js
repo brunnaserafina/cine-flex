@@ -7,8 +7,8 @@ import BuyForm from './BuyForm'
 import "./style.css";
 
 export default function ChooseSeat() {
-    window.scrollTo(0,0);
-    
+    window.scrollTo(0, 0);
+
     const { idSessao } = useParams();
     const [seat, setSeat] = useState([]);
     const [seatIds, setSeatIds] = useState([]);
@@ -74,7 +74,7 @@ export default function ChooseSeat() {
             />
 
             <div className="footer">
-                <img src={seat.movie.posterURL} alt="posterURL"/>
+                <img src={seat.movie.posterURL} alt="posterURL" />
                 <div>
                     <h3>{seat.movie.title}</h3>
                     <h3>{seat.day.weekday} - {seat.name}</h3>
@@ -86,9 +86,9 @@ export default function ChooseSeat() {
     );
 }
 
-function Subtitle({ 
-    classe, 
-    status 
+function Subtitle({
+    classe,
+    status
 }) {
     return (
         <div className="subtitle">

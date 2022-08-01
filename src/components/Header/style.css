@@ -1,17 +1,17 @@
 .header {
-    background-color:#C3CFD9;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    width: 100vw;
+  background-color: #c3cfd9;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100vw;
 }
 
 .header h1 {
-    color: #E8833A;
-    font-family: Roboto;
-    font-size: 34px;
-    font-weight: 400;
+  color: #e8833a;
+  font-family: Roboto;
+  font-size: 34px;
+  font-weight: 400;
 }

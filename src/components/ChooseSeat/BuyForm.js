@@ -7,10 +7,10 @@ export default function BuyForm({ movie, day, name, seatIds, seatsSelected }) {
     const navigate = useNavigate();
     const [buyer, setBuyer] = useState("");
     const [cpf, setCpf] = useState("");
-    
+
     function handleSubmit(event) {
         event.preventDefault();
-        
+
         if (seatIds.length === 0) {
             alert("Favor selecionar no mínimo um assento");
         } else if (buyer === "" || cpf === "") {

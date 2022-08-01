@@ -54,6 +54,12 @@
   border: solid 1px #45bdb0;
 }
 
+.reservado:hover,
+.indisponivel:hover,
+.disponivel:hover {
+  cursor: pointer;
+}
+
 .subtitle {
   display: flex;
   flex-direction: column;

@@ -6,8 +6,8 @@ import axios from 'axios';
 import "./style.css";
 
 export default function ChooseMovie() {
-    window.scrollTo(0,0);
-    
+    window.scrollTo(0, 0);
+
     return (
         <>
             <div className="select-movie">
@@ -46,7 +46,7 @@ function Movies() {
 function Movie({ id, posterURL }) {
     return (
         <Link to={`/sessoes/${id}`}>
-            <img src={posterURL} alt="poster"/>
+            <img src={posterURL} alt="poster" />
         </Link>
     );
 }

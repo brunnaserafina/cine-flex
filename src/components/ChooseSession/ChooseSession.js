@@ -6,6 +6,8 @@ import axios from 'axios';
 import "./style.css";
 
 export default function ChooseSession() {
+    window.scrollTo(0,0);
+    
     const { idFilme } = useParams();
     const [time, setTime] = useState(null);
 

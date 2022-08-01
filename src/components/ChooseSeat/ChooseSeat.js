@@ -2,10 +2,13 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import Loading from '../Loading/Loading';
-import Buy from './Buy'
+import Seats from './Seats'
+import BuyForm from './BuyForm'
 import "./style.css";
 
 export default function ChooseSeat() {
+    window.scrollTo(0,0);
+    
     const { idSessao } = useParams();
     const [seat, setSeat] = useState([]);
     const [seatIds, setSeatIds] = useState([]);
@@ -64,7 +67,7 @@ export default function ChooseSeat() {
                 ))}
             </div>
 
-            <Buy
+            <BuyForm
                 {...seat}
                 seatIds={seatIds}
                 seatsSelected={seatsSelected}
@@ -83,46 +86,10 @@ export default function ChooseSeat() {
     );
 }
 
-function Seats({ item, seatIds, setSeatIds, seatsSelected, setSeatsSelected }) {
-    const [click, setClick] = useState(false);
-
-    if (item.isAvailable === false) {
-        return (
-            <div className="indisponivel" onClick={() => alert("Esse assento não está disponível")}>{item.name}</div>
-        )
-    } else if (item.isAvailable === true && click === true) {
-        function cancel() {
-            setClick(!click)
-            let filter = seatIds.filter((el) => el !== item.id);
-            setSeatIds(filter);
-            let newFilter = seatsSelected.filter((el) => el !== item.name);
-            setSeatsSelected(newFilter);
-        }
-
-        return (
-            <div className="reservado" onClick={cancel}>{item.name}</div>
-        )
-    } else {
-        function reserve() {
-            setClick(!click)
-            let add = [...seatIds];
-            add.push(item.id);
-            setSeatIds(add);
-            let newAdd = [...seatsSelected];
-            newAdd.push(item.name);
-            setSeatsSelected(newAdd);
-        }
-
-        return (
-            <>
-                <div className="disponivel" onClick={reserve}>{item.name}</div>
-            </>
-        );
-    }
-
-}
-
-function Subtitle({ classe, status }) {
+function Subtitle({ 
+    classe, 
+    status 
+}) {
     return (
         <div className="subtitle">
             <span className={classe}></span>

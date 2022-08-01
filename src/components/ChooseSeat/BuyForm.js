@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./style.css";
 
-export default function Buy({ movie, day, name, seatIds, seatsSelected }) {
+export default function BuyForm({ movie, day, name, seatIds, seatsSelected }) {
     const navigate = useNavigate();
     const [buyer, setBuyer] = useState("");
     const [cpf, setCpf] = useState("");
@@ -46,7 +46,9 @@ export default function Buy({ movie, day, name, seatIds, seatsSelected }) {
                 <input className="input"
                     type="text"
                     placeholder="Digite seu nome..."
+                    pattern="([aA-zZ]+)"
                     required
+                    title="Insira seu nome"
                     value={buyer}
                     onChange={(e) => setBuyer(e.target.value)}
                 />
@@ -59,6 +61,7 @@ export default function Buy({ movie, day, name, seatIds, seatsSelected }) {
                     placeholder="Digite seu CPF... "
                     pattern="^([0-9]){3}\.([0-9]){3}\.([0-9]){3}-([0-9]){2}$"
                     required
+                    title="Insira seu CPF no formato 000.000.000-00"
                     value={cpf}
                     onChange={(e) => setCpf(e.target.value)}
                 />

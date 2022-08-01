@@ -6,6 +6,8 @@ import axios from 'axios';
 import "./style.css";
 
 export default function ChooseMovie() {
+    window.scrollTo(0,0);
+    
     return (
         <>
             <div className="select-movie">

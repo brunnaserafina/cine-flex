@@ -1,0 +1,80 @@
+.seats {
+  background-color: red;
+}
+
+.select-seat {
+  display: flex;
+  justify-content: center;
+}
+
+.select-seat h1 {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 24px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #293845;
+}
+
+.assentos {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 25px;
+  margin-right: 15px;
+}
+
+.assentos div {
+  width: 26px;
+  height: 26px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Roboto;
+  font-size: 11px;
+  margin: 4px 3.5px;
+  box-sizing: border-box;
+}
+
+.indisponivel {
+  background-color: #fbe192;
+  border: solid 1px #F7C52B;
+}
+
+.disponivel {
+  background-color:#C3CFD9;
+  border: solid 1px #808f9d;
+}
+
+.reservado {
+  background-color:#8DD7CF;
+  border: solid 1px #45BDB0;
+}
+
+.subtitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.subtitle span {
+  width: 25px;
+  height: 25px;
+  border-radius: 17px;
+  box-sizing: border-box;
+}
+
+.subtitle p {
+  font-family: Roboto;
+  font-size: 13px;
+  margin: 7px 13px;
+  color:#4E5A65;
+}
+
+.sub {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+
+}

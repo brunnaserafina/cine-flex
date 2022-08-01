@@ -16,14 +16,19 @@
   color: #293845;
 }
 
-.assentos {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: 25px;
-  margin-right: 15px;
+.seat {
+  width: 340px;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
 }
 
-.assentos div {
+.seat-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.seat div {
   width: 26px;
   height: 26px;
   border-radius: 12px;
@@ -38,17 +43,17 @@
 
 .indisponivel {
   background-color: #fbe192;
-  border: solid 1px #F7C52B;
+  border: solid 1px #f7c52b;
 }
 
 .disponivel {
-  background-color:#C3CFD9;
+  background-color: #c3cfd9;
   border: solid 1px #808f9d;
 }
 
 .reservado {
-  background-color:#8DD7CF;
-  border: solid 1px #45BDB0;
+  background-color: #8dd7cf;
+  border: solid 1px #45bdb0;
 }
 
 .subtitle {
@@ -68,13 +73,58 @@
 .subtitle p {
   font-family: Roboto;
   font-size: 13px;
-  margin: 7px 13px;
-  color:#4E5A65;
+  margin: 7px 13px 40px 13px;
+  color: #4e5a65;
 }
 
 .sub {
   margin-top: 12px;
   display: flex;
   justify-content: center;
+}
 
+.info {
+  font-family: Roboto;
+  font-size: 18px;
+  color: #293845;
+  margin: 0px 0px 2px;
+}
+
+.input {
+  margin-bottom: 10px;
+  padding: 18px;
+  width: 85vw;
+  height: 50px;
+  border: 1px solid #d5d5d5;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-family: Roboto;
+  font-style: italic;
+  font-size: 18px;
+  color:#AFAFAF;
+}
+
+.reserve {
+  width: 225px;
+  height: 42px;
+  background-color: #E8833A;
+  border-radius: 3px;
+  border: none; 
+  font-family: Roboto;
+  font-size: 18px;
+  color: #FFFFFF;
+  margin-top: 50px;
+}
+
+.sucesso {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

@@ -17,7 +17,7 @@ export default function ChooseMovie() {
 }
 
 function Movies() {
-    const [movie, setMovie] = useState(null);
+    const [movie, setMovie] = useState([]);
 
     useEffect(() => {
         const promise = axios.get("https://mock-api.driven.com.br/api/v7/cineflex/movies");
@@ -26,7 +26,7 @@ function Movies() {
 
     //console.log(movie);
 
-    if (movie === null) {
+    if (movie.length === 0) {
         return (
             <Loading />
         );

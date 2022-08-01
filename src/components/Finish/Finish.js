@@ -17,7 +17,7 @@ export default function Finish() {
                 <p>{state.date} {state.hour}</p>
             </div>
 
-            <div className="session-movie">
+            <div className="tickets">
                 <h4>Ingressos</h4>
                 {state.seats.seatsSelected.map((seat, index) => {
                     return <p key={index}>Assento {seat}</p>;

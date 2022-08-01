@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import Footer from '../Footer/Footer';
 import Loading from '../Loading/Loading';
 import Buy from './Buy'
 import "./style.css";
@@ -18,8 +17,8 @@ export default function ChooseSeat() {
     ];
 
     useEffect(() => {
-        const promise = axios.get(`https://mock-api.driven.com.br/api/v7/cineflex/showtimes/${idSessao}/seats`)
-        promise.then(response => setSeat(response.data))
+        const promise = axios.get(`https://mock-api.driven.com.br/api/v7/cineflex/showtimes/${idSessao}/seats`);
+        promise.then(response => setSeat(response.data));
     }, []);
 
     if (seat.length === 0) {
@@ -27,6 +26,8 @@ export default function ChooseSeat() {
             <Loading />
         );
     }
+
+    console.log("seat é", seat);
 
     return (
         <>
@@ -67,9 +68,14 @@ export default function ChooseSeat() {
                 seatsSelected={seatsSelected}
             />
 
-            <Footer
-                {...seat.movie}
-            />
+            <div className="footer">
+                <img src={seat.movie.posterURL} />
+                <div>
+                    <h3>{seat.movie.title}</h3>
+                    <h3>{seat.day.weekday} - {seat.name}</h3>
+                </div>
+
+            </div>
         </>
 
     );

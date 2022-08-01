@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-import Footer from '../Footer/Footer';
 import Loading from '../Loading/Loading';
 import axios from 'axios';
 import "./style.css";
@@ -15,7 +14,7 @@ export default function ChooseSession() {
         promise.then(response => setTime(response.data));
     }, [])
 
-    //console.log(time);
+    console.log(time);
 
     if (time === null) {
         return (
@@ -33,7 +32,10 @@ export default function ChooseSession() {
                     <Sessions key={day.id} {...day} />
                 ))}
             </div>
-            <Footer {...time}/>
+            <div className="footer">
+                <img src={time.posterURL} />
+                <h3>{time.title}</h3>
+            </div>
         </>
     );
 }

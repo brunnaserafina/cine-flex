@@ -31,17 +31,40 @@
   font-size: 18px;
   margin-right: 8px;
   font-family: Roboto;
-  color: #FFFFFF;
+  color: #ffffff;
   border-radius: 3px;
 }
 
-
 .hours {
-    display: flex;
-    margin-left: 30px;
+  display: flex;
+  margin-left: 30px;
 }
 
 a {
-    text-decoration: none;
-  }
-  
+  text-decoration: none;
+}
+
+.footer {
+  width: 100vw;
+  height: 117px;
+  background-color: #c3cfd9;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+.footer img {
+  width: 48px;
+  height: 72px;
+  border: solid 8px #ffffff;
+  border-radius: 2px;
+  margin: 0px 15px;
+}
+
+.footer h3 {
+  font-family: Roboto;
+  font-size: 26px;
+  font-weight: 400;
+  color: #293845;
+}

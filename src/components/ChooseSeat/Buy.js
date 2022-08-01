@@ -27,12 +27,12 @@ export default function Buy({ movie, day, name, seatIds, seatsSelected }) {
             promise.then(
                 navigate("/sucesso", {
                     state: {
-                        buyer: buyer,
-                        seats: { seatsSelected },
-                        cpf: cpf,
                         title: movie.title,
                         date: day.date,
                         hour: name,
+                        seats: { seatsSelected },
+                        buyer: buyer,
+                        cpf: cpf
                     },
                 }),
             );
@@ -47,6 +47,7 @@ export default function Buy({ movie, day, name, seatIds, seatsSelected }) {
                     type="text"
                     placeholder="Digite seu nome..."
                     required
+                    value={buyer}
                     onChange={(e) => setBuyer(e.target.value)}
                 />
             </div>
@@ -58,6 +59,7 @@ export default function Buy({ movie, day, name, seatIds, seatsSelected }) {
                     placeholder="Digite seu CPF... "
                     pattern="^([0-9]){3}\.([0-9]){3}\.([0-9]){3}-([0-9]){2}$"
                     required
+                    value={cpf}
                     onChange={(e) => setCpf(e.target.value)}
                 />
             </div>

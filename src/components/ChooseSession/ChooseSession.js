@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Loading from '../Loading/Loading';
@@ -12,9 +12,11 @@ export default function ChooseSession() {
     useEffect(() => {
         const promise = axios.get(`https://mock-api.driven.com.br/api/v5/cineflex/movies/${idFilme}/showtimes`);
         promise.then(response => setTime(response.data));
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
-    console.log(time);
+    //console.log(time);
 
     if (time === null) {
         return (
@@ -33,7 +35,7 @@ export default function ChooseSession() {
                 ))}
             </div>
             <div className="footer">
-                <img src={time.posterURL} />
+                <img src={time.posterURL} alt="poster"/>
                 <h3>{time.title}</h3>
             </div>
         </>

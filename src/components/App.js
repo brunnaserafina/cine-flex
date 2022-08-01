@@ -9,13 +9,13 @@ import './assets/css/reset.css';
 import './assets/css/style.css';
 
 export default function App() {
-    
+
     return (
         <>
             <Header />
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<ChooseMovie />}></Route> 
+                    <Route path="/" element={<ChooseMovie />}></Route>
                     <Route path="/sessoes/:idFilme" element={<ChooseSession />}></Route>
                     <Route path="/assentos/:idSessao" element={<ChooseSeat />}></Route>
                     <Route path="/sucesso" element={<Finish />}></Route>

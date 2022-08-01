@@ -8,7 +8,6 @@
 }
 
 .select-seat h1 {
-  font-family: Roboto;
   font-weight: 400;
   font-size: 24px;
   margin-top: 40px;
@@ -35,7 +34,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: Roboto;
   font-size: 11px;
   margin: 4px 3.5px;
   box-sizing: border-box;
@@ -71,7 +69,6 @@
 }
 
 .subtitle p {
-  font-family: Roboto;
   font-size: 13px;
   margin: 7px 13px 40px 13px;
   color: #4e5a65;
@@ -84,7 +81,6 @@
 }
 
 .info {
-  font-family: Roboto;
   font-size: 18px;
   color: #293845;
   margin: 0px 0px 2px;
@@ -98,7 +94,6 @@
   border: 1px solid #d5d5d5;
   border-radius: 3px;
   box-sizing: border-box;
-  font-family: Roboto;
   font-style: italic;
   font-size: 18px;
   color: #afafaf;
@@ -110,7 +105,6 @@
   background-color: #e8833a;
   border-radius: 3px;
   border: none;
-  font-family: Roboto;
   font-size: 18px;
   color: #ffffff;
   margin-top: 50px;
@@ -148,7 +142,6 @@ form {
 }
 
 .footer h3 {
-  font-family: Roboto;
   font-size: 26px;
   font-weight: 400;
   color: #293845;

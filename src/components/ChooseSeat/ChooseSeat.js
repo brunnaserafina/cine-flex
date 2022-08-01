@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import Loading from '../Loading/Loading';
@@ -19,6 +19,8 @@ export default function ChooseSeat() {
     useEffect(() => {
         const promise = axios.get(`https://mock-api.driven.com.br/api/v7/cineflex/showtimes/${idSessao}/seats`);
         promise.then(response => setSeat(response.data));
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     if (seat.length === 0) {
@@ -27,7 +29,7 @@ export default function ChooseSeat() {
         );
     }
 
-    console.log("seat é", seat);
+    //console.log( seat);
 
     return (
         <>
@@ -69,7 +71,7 @@ export default function ChooseSeat() {
             />
 
             <div className="footer">
-                <img src={seat.movie.posterURL} />
+                <img src={seat.movie.posterURL} alt="posterURL"/>
                 <div>
                     <h3>{seat.movie.title}</h3>
                     <h3>{seat.day.weekday} - {seat.name}</h3>

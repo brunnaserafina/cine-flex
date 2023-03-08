@@ -42,7 +42,7 @@ export default function ChooseSeat() {
 
             <div className="seat-div">
                 <div className="seat">
-                    {seat.seats.map((item) => (
+                    {seat.seats.slice(0,50).map((item) => (
                         <Seats
                             item={item}
                             key={item.id}
